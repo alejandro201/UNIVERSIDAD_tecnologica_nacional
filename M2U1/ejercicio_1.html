@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="principal">
+    <div class="alternar1">
+        <button class="cuadrado1"></button>
+    </div>
+    <div class="alternar2">
+        <button class="cuadrado2"></button>
+    </div>
+    <div class="alternar3">
+        <button class="cuadrado3"></button>
+    </div>
+</div>
+<script>
+    // CSS
+    const alternar1 = document.getElementsByClassName('alternar1')[0];          
+    alternar1.addEventListener('click', function(e) {
+        e.currentTarget.classList.toggle('activo');
+    });
+
+    const alternar2 = document.getElementsByClassName('alternar2')[0];          
+    alternar2.addEventListener('click', function(e) {
+        e.currentTarget.classList.toggle('activo');
+    });
+    const alternar3 = document.getElementsByClassName('alternar3')[0];          
+    alternar3.addEventListener('click', function(e) {
+        e.currentTarget.classList.toggle('activo');
+    });
+</script>
+
+</body>
+
+</html>

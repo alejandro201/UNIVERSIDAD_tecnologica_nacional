@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countChars(obj){
+    var maxLength = 150;
+    var strLength = obj.value.length;
+    var charRemain = (strLength - maxLength);
+    
+    if(charRemain <= 0){
+        document.getElementById("charNum").innerHTML = '<span style="color: blue;">Sigue escribiendo tienes hasta 150 caracteres '+strLength+' caracteres</span>';
+    }else{
+        document.getElementById("charNum").innerHTML = '<span style="color: red;"> '+charRemain+' de exceso Se paso el limite de 150 caracteres</span>';
+    }
+}
+    </script>
+    <textarea name="message" onkeyup="countChars(this);" rows="7" cols="45"></textarea>
+    <p id="charNum">Escriba un mensaje</p>
+</body>
+</html>

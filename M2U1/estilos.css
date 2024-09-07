@@ -1,0 +1,49 @@
+
+.cuadrado1{
+    width: 200px;
+    height: 200px;
+    background: blue;
+    border: 4px solid black;
+    cursor: pointer;
+}
+.cuadrado2{
+    width: 200px;
+    height: 200px;
+    background: green;
+    border: 4px solid black;
+    cursor: pointer;
+}
+.cuadrado3{
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    border: 4px solid black;
+    cursor: pointer;
+}
+.alternar1 {
+    background: white;
+    width: 100%;
+    height: 250px;
+}
+.alternar1.activo {
+    background: blue;
+    color: white;
+}
+.alternar2 {
+    background: white;
+    width: 100%;
+    height: 250px;
+}
+.alternar2.activo {
+    background: green;
+    color: white;
+}
+.alternar3 {
+    background: white;
+    width: 100%;
+    height: 600px;
+}
+.alternar3.activo {
+    background: orange;
+    color: white;
+}
