@@ -8,14 +8,13 @@
 <body>
     <script>
         
-        const Laptops = ["1","2","3","4","5"]; // Arreglo de numeros obiamente aca el mayor es 5
-        console.log(Laptops);
+        const Laptops = [1,2,3,4,5]; // Arreglo de numeros obiamente aca el mayor es 5
+        let   mayor=0;
         for( let i = 0; i<Laptops.length; i++){ //Aca se ase el recorrido del arreglo con el bucle for
-            if(Laptops.length>=Laptops[i+1]) { //Aca se busca cual es mayor numero del arreglo
-                const mayor=Laptops.length; //Aca lo guardo en una variable de tipo const
-        console.log(mayor);
-       }
-		}
+            if(Laptops[i]>mayor) { //Aca se busca cual es mayor numero del arreglo
+                mayor=Laptops[i]; //Y aca la variable toma posecion del mayor haciendo el recorrido por cada indice.
+		}}
+        console.log(`El mayor de ${Laptops} es ${mayor}`); // Y aca se imprime el mayor.
         
     </script>
 </body>
