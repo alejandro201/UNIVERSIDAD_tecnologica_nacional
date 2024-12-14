@@ -54,28 +54,29 @@
     <div class="paralax">
     <h2 id="productos" style="text-align: center;color: coral;margin-top: 25px;margin-bottom: 20px;">NUESTROS PRODUCTOS</h2>
 <div class="row">
+  {{#each productos}}
     <div class="col-md-3">
         <div class="card" style="width: 18rem;">
-            <img src="imagenes/skateboard1.jpg" class="card-img-top" alt="...">
+            <img src="{{imagen}}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">SKATEBOARDING</h5>
+              <h5 class="card-title">{{titulo}}</h5>
               <p class="card-text" style="text-align: justify;">
-                El surgimiento de este deporte extremo tiene lugar en el estado de California en las décadas de 1960 y 1970, época en la cual los deportes extremos como el surf gozaban de un gran auge mundial. El motivo principal de la creación del monopatinaje se basa en la sustitución de la tabla de surf en tierra.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                {{cuerpo}}</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal{{id}}">
                Leer mas
               </button>
               
               <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">CPU </h1>
+                      <img src="{{imagen}}" width="40%" />
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">{{titulo}} </h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      Su función es interpretar las instrucciones de un programa informático mediante la realización de las operaciones básicas aritméticas, lógicas, y externas (procedentes de la unidad de entrada/salida). Su diseño y su avance ha variado notablemente desde su creación, aumentando su eficiencia y potencia y reduciendo el consumo de energía y el coste.
-                      Un ordenador puede contener más de una CPU (multiprocesamiento). En la actualidad, los microprocesadores están constituidos por un único circuito integrado (chip) aunque existen los procesadores multinúcleo (varias CPU en un solo circuito integrado). Un circuito integrado que contiene una CPU también puede contener los dispositivos periféricos y otros componentes de un sistema informático; similar a un microcontrolador (menos potente en RAM) se le denomina sistema en un chip (SoC).
+                      {{cuerpo}}
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -85,226 +86,11 @@
               </div>
             </div>
           </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img src="imagenes/skateboard2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">SKATE</h5>
-              <p class="card-text" style="text-align: justify;">El monopatinaje1​ o patinaje en tabla2​ (en inglés, skateboarding) es un deporte que consiste en deslizarse sobre un monopatín y a la vez poder realizar diversos trucos, gran parte de ellos elevando la tabla del suelo,</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Leer mas
-               </button>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">CPU </h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        Su función es interpretar las instrucciones de un programa informático mediante la realización de las operaciones básicas aritméticas, lógicas, y externas (procedentes de la unidad de entrada/salida). Su diseño y su avance ha variado notablemente desde su creación, aumentando su eficiencia y potencia y reduciendo el consumo de energía y el coste.
-                        Un ordenador puede contener más de una CPU (multiprocesamiento). En la actualidad, los microprocesadores están constituidos por un único circuito integrado (chip) aunque existen los procesadores multinúcleo (varias CPU en un solo circuito integrado). Un circuito integrado que contiene una CPU también puede contener los dispositivos periféricos y otros componentes de un sistema informático; similar a un microcontrolador (menos potente en RAM) se le denomina sistema en un chip (SoC).
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img src="imagenes/skateboard3.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">PARTE DEL MONOPATIN</h5>
-              <p class="card-text" style="text-align: justify;">
-                Tabla: Es la superficie donde se para el patinador y a la cual se fijan las ruedas, pueden estar hechas de diferentes formas y de diferentes tamaños, aunque las más comunes son de arce canadiense.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Leer mas
-               </button>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">CPU </h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        Su función es interpretar las instrucciones de un programa informático mediante la realización de las operaciones básicas aritméticas, lógicas, y externas (procedentes de la unidad de entrada/salida). Su diseño y su avance ha variado notablemente desde su creación, aumentando su eficiencia y potencia y reduciendo el consumo de energía y el coste.
-                        Un ordenador puede contener más de una CPU (multiprocesamiento). En la actualidad, los microprocesadores están constituidos por un único circuito integrado (chip) aunque existen los procesadores multinúcleo (varias CPU en un solo circuito integrado). Un circuito integrado que contiene una CPU también puede contener los dispositivos periféricos y otros componentes de un sistema informático; similar a un microcontrolador (menos potente en RAM) se le denomina sistema en un chip (SoC).
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img src="imagenes/skateboard4.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">RUEDAS MONOPATIN</h5>
-              <p class="card-text" style="text-align: justify;">
-                Son cuatro y van adosadas a ambos extremos de los ejes, y están hechas de un material llamado uretano.
-
-Al elegir un set de ruedas de monopatín, debe considerarse el tamaño y la dureza. La mayoría de las ruedas tienen un “durómetro”, pero puedes comprar unas de “durómetro dual”, las cuales poseen un centro, o núcleo, más duro rodeado por un área de superficie de contacto más blanda.
-              </p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Leer mas
-               </button>
-                 <!-- Modal -->
-                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">CPU </h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        Su función es interpretar las instrucciones de un programa informático mediante la realización de las operaciones básicas aritméticas, lógicas, y externas (procedentes de la unidad de entrada/salida). Su diseño y su avance ha variado notablemente desde su creación, aumentando su eficiencia y potencia y reduciendo el consumo de energía y el coste.
-                        Un ordenador puede contener más de una CPU (multiprocesamiento). En la actualidad, los microprocesadores están constituidos por un único circuito integrado (chip) aunque existen los procesadores multinúcleo (varias CPU en un solo circuito integrado). Un circuito integrado que contiene una CPU también puede contener los dispositivos periféricos y otros componentes de un sistema informático; similar a un microcontrolador (menos potente en RAM) se le denomina sistema en un chip (SoC).
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-    </div>
-</div></div> <br><br>
-<div class="row">
-  <div class="col-md-3">
-      <div class="card" style="width: 18rem;">
-          <img src="imagenes/skateboard5.webp" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">TRUCOS MONOPATIN</h5>
-            <p class="card-text" style="text-align: justify;">Es el truco más básico; de él derivan casi todos los demás, pues es la madre de la gran mayoría de los trucos modernos. Consiste en saltar con la tabla sin tomarla con las manos. Para realizarlo se siguen los siguientes pasos:</p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-             Leer mas
-            </button>
-            
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">CPU </h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    Su función es interpretar las instrucciones de un programa informático mediante la realización de las operaciones básicas aritméticas, lógicas, y externas (procedentes de la unidad de entrada/salida). Su diseño y su avance ha variado notablemente desde su creación, aumentando su eficiencia y potencia y reduciendo el consumo de energía y el coste.
-                    Un ordenador puede contener más de una CPU (multiprocesamiento). En la actualidad, los microprocesadores están constituidos por un único circuito integrado (chip) aunque existen los procesadores multinúcleo (varias CPU en un solo circuito integrado). Un circuito integrado que contiene una CPU también puede contener los dispositivos periféricos y otros componentes de un sistema informático; similar a un microcontrolador (menos potente en RAM) se le denomina sistema en un chip (SoC).
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="col-md-3">
-      <div class="card" style="width: 18rem;">
-          <img src="imagenes/skateboard6.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">TRUCOS DE SUELO</h5>
-            <p class="card-text" style="text-align: justify;">Los trucos de piso, flatground o flip tricks, como flip o varial flip que es un flip combinado con un pop shove it, son los más practicados en la actualidad, son aquellos que se hacen sobre una superficie lisa y no necesitan mucho espacio, tales como el pogo, el railstand, o el street.</p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Leer mas
-             </button>
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">CPU </h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      Su función es interpretar las instrucciones de un programa informático mediante la realización de las operaciones básicas aritméticas, lógicas, y externas (procedentes de la unidad de entrada/salida). Su diseño y su avance ha variado notablemente desde su creación, aumentando su eficiencia y potencia y reduciendo el consumo de energía y el coste.
-                      Un ordenador puede contener más de una CPU (multiprocesamiento). En la actualidad, los microprocesadores están constituidos por un único circuito integrado (chip) aunque existen los procesadores multinúcleo (varias CPU en un solo circuito integrado). Un circuito integrado que contiene una CPU también puede contener los dispositivos periféricos y otros componentes de un sistema informático; similar a un microcontrolador (menos potente en RAM) se le denomina sistema en un chip (SoC).
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="col-md-3">
-      <div class="card" style="width: 18rem;">
-          <img src="imagenes/skateboard7.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">TRUCOS LIP, STALL O ENCAJE</h5>
-            <p class="card-text" style="text-align: justify;">Son los realizados en los bordes de las rampas. Los trucos de lip, stall o encaje consisten en colocarse en un borde de un quarter pipe, un half pipe una piscina o un bowl. Básicamente consisten en subir una parte de la tabla o realizar algún tipo de plant en el borde de dichos objetos.</p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Leer mas
-             </button>
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">CPU </h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      Su función es interpretar las instrucciones de un programa informático mediante la realización de las operaciones básicas aritméticas, lógicas, y externas (procedentes de la unidad de entrada/salida). Su diseño y su avance ha variado notablemente desde su creación, aumentando su eficiencia y potencia y reduciendo el consumo de energía y el coste.
-                      Un ordenador puede contener más de una CPU (multiprocesamiento). En la actualidad, los microprocesadores están constituidos por un único circuito integrado (chip) aunque existen los procesadores multinúcleo (varias CPU en un solo circuito integrado). Un circuito integrado que contiene una CPU también puede contener los dispositivos periféricos y otros componentes de un sistema informático; similar a un microcontrolador (menos potente en RAM) se le denomina sistema en un chip (SoC).
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="col-md-3">
-      <div class="card" style="width: 18rem;">
-          <img src="imagenes/skateboard8.webp" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">TRUCOS DE PATINAJE CALLEJERO</h5>
-            <p class="card-text" style="text-align: justify;">50-50 o fifty-fifty: Son los trucos donde los ejes (trucks) pasan sobre un borde (sea una baranda, una base, un borde metálico, etc.) como por ejemplo el boardslide, lipslide, noseslide, tailslide, feeblegrind, nosegrind, etc. Los trucos realizados con ambos trucks recibe el nombre de 50-50, con el truck trasero "raspando" el obstáculo y el truck delantero elevado recibe el nombre de 5-0.</p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Leer mas
-             </button>
-               <!-- Modal -->
-               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">CPU </h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      Su función es interpretar las instrucciones de un programa informático mediante la realización de las operaciones básicas aritméticas, lógicas, y externas (procedentes de la unidad de entrada/salida). Su diseño y su avance ha variado notablemente desde su creación, aumentando su eficiencia y potencia y reduciendo el consumo de energía y el coste.
-                      Un ordenador puede contener más de una CPU (multiprocesamiento). En la actualidad, los microprocesadores están constituidos por un único circuito integrado (chip) aunque existen los procesadores multinúcleo (varias CPU en un solo circuito integrado). Un circuito integrado que contiene una CPU también puede contener los dispositivos periféricos y otros componentes de un sistema informático; similar a un microcontrolador (menos potente en RAM) se le denomina sistema en un chip (SoC).
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-  </div>
+    </div> {{/each}}
 </div>
+
+</div> <br><br>
+
 <h3 id="contacto" style="color: coral;margin-top: 40px;text-align: center;">CONTACTO</h3><br>
 <div class="row">
 <div class="col-md-6">

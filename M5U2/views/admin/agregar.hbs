@@ -2,13 +2,18 @@
    <div class="row">
       <div class="col-6 offset-3">
          <h4>Agregar un nuevo producto</h4>
-         <form action="/admin/productos/agregar" method="post">
+         <form action="/admin/productos/agregar" method="post" enctype="multipart/form-data">
             <div class="form-group">
                <input class="form-control" placeholder="Titulo" name="titulo">
             </div> <br>
           <div class="form-group">
              <textarea class="form-control" placeholder="Contenido" name="cuerpo"></textarea>
-          </div> <br>
+          </div>
+           <br>
+           <div class="form-group">
+            <label>Imagen: <input class="form-control" 
+            type="file" name="imagen" id="imagen"/></label>
+            </div> <br>
               <button type="submit" class="btn btn-primary">Guardar</button>
          </form>
          {{#if error}}
