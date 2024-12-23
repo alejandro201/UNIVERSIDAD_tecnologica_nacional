@@ -1,15 +1,24 @@
 var express = require('express');
 var router = express.Router();
 
-var productosModel = require('../../models/productosModel');
 var util= require('util');
 var cloudinary= require('cloudinary').v2;
 const uploader= util.promisify(cloudinary.uploader.upload);
 const destroy = util.promisify(cloudinary.uploader.destroy);
 
+var productosModel = require('../../models/productosModel');
+
 router.get('/',async function(req, res, next) {
 
-    var productos = await productosModel.getProductos();
+   // var productos = await productosModel.getProductos();
+
+   var productos
+   if(req.query.q === undefined){
+      productos= await productosModel.getProductos();
+} else {
+    productos= await productosModel.buscarProductos(req.query.q);
+}
+
 productos=productos.map(producto=> {
     if(producto.img_id){
         const imagen= cloudinary.image(producto.img_id, {
@@ -35,7 +44,9 @@ productos=productos.map(producto=> {
     res.render('admin/productos', {
         layout: 'admin/layout',
         usuario: req.session.nombre,
-        productos
+        productos,
+        is_search: req.query.q !== undefined,
+        q: req.query.q
     });
 });
 

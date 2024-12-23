@@ -17,8 +17,15 @@ fa-sign-out-alt"></i></a>
 <div class="col-7" style="margin-top:9px;">
     <h2>Listado de Productos</h2>
 </div>
-<div class="col-5 text-rigth">
+<div class="col-2 text-left">
 <a href="/admin/productos/agregar" class="btn btn-success"><i class="fas fa-plus"></i>Nuevo</a>
+</div>
+<div class="col-3 text-right">
+  <form class"form-inline" action="/admin/productos" method="get">
+     <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="q"{{#if q}} value="{{q}}"{{/if}}>
+     <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+    </button>
+  </form>
 </div>
 </div>
 {{!-- fin fila2--}}
@@ -51,6 +58,11 @@ fa-sign-out-alt"></i></a>
         {{/each }}
         </tbody>
         </table>
+         {{#if is_search}}
+            {{#unless productos.Length}}
+                No se encontraron resultados para "<b>{{q}}</b>"
+                {{/unless}}
+                {{/if}}
             </div>
     </div>
     {{!-- fin fila 3--}}

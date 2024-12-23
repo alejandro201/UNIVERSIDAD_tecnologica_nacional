@@ -39,4 +39,10 @@ async function modificarProductoById(obj,id){
     }
 } //cierre del modificar
 
-module.exports = {getProductos, deleteProductosById, insertProductos,getProductoById,modificarProductoById}
+async function buscarProductos(busqueda){
+    var query= "select *from productos where titulo like ? OR cuerpo like ?";
+    var rows = await pool.query(query,['%'+busqueda+'%','%'+busqueda+'%','%'+busqueda+'%']);
+    return rows;
+}
+
+module.exports = {getProductos, deleteProductosById, insertProductos,getProductoById,modificarProductoById,buscarProductos}
