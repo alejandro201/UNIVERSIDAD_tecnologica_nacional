@@ -33,7 +33,7 @@ productos=productos.map(producto=> {
     }else{
         return{
             ...producto,
-            iamgen:''
+            imagen:''
         }
     }
 });
